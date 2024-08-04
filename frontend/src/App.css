@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Add space between cards */
+}
+
+.enemietable{
+  border: 1px solid #ddd;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Make the cards smaller */
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.card input {
+  width: calc(100% - 22px); /* Make input field fit the card width */
+  margin: 5px 0;
+}
+
+.card button {
+  width: 100%;
+  padding: 5px;
+  margin-top: 20px;
+}
