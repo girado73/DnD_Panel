@@ -2,19 +2,21 @@ import React from 'react';
 import CharacterCard from './components/CharacterCard';
 import './App.css';
 import EnemiesTable from './components/EnemieTable.js'
+import HPBar from './components/HP_Barchart';
 
 const Home = ({ characters, handleCharacterUpdate }) => {
   return (
     <div>
       <div className="card-container">
         {characters.map(character => (
-          <CharacterCard 
-            key={character.name} 
-            character={character} 
-            onCharacterUpdate={handleCharacterUpdate} 
+          <CharacterCard
+            key={character.name}
+            character={character}
+            onCharacterUpdate={handleCharacterUpdate}
           />
         ))}
       </div>
+      <HPBar characters={characters} />
       <table>
         <tr>
           <th>DiffClass</th>
