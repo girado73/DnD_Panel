@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './CharacterCreation.css';
+import '../CharacterCreation.css';
 
 const CharacterCreation = () => {
   const [character, setCharacter] = useState({
@@ -119,10 +119,10 @@ const CharacterCreation = () => {
           <label>Spellslots:</label>
           {character.spellslots.map((slot, index) => (
             <div key={index}>
-              <input 
-                type="number" 
-                value={slot} 
-                onChange={(e) => handleSpellslotsChange(index, e.target.value)} 
+              <input
+                type="number"
+                value={slot}
+                onChange={(e) => handleSpellslotsChange(index, e.target.value)}
               />
             </div>
           ))}
@@ -132,10 +132,10 @@ const CharacterCreation = () => {
           <label>Bonus Info:</label>
           {character.bonusInfo.map((info, index) => (
             <div key={index}>
-              <input 
-                type="text" 
-                value={info} 
-                onChange={(e) => handleBonusInfoChange(index, e.target.value)} 
+              <input
+                type="text"
+                value={info}
+                onChange={(e) => handleBonusInfoChange(index, e.target.value)}
               />
             </div>
           ))}

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Home from './Home';
-import CharacterCreation from './Creation.js'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import CharacterCreation from './pages/Creation.js'
 import HamburgerMenu from './components/HamburgerMenu';
+import Story from './pages/Story';
 import './App.css';
 
 const App = () => {
@@ -24,8 +25,8 @@ const App = () => {
   }, []);
 
   const handleCharacterUpdate = (updatedCharacter) => {
-    setCharacters(prevCharacters => 
-      prevCharacters.map(char => 
+    setCharacters(prevCharacters =>
+      prevCharacters.map(char =>
         char.name === updatedCharacter.name ? updatedCharacter : char
       )
     );
@@ -44,14 +45,18 @@ const App = () => {
       <div className="App">
         <HamburgerMenu />
         <Routes>
-           <Route 
-            path="/" 
-            element={<Home characters={characters} handleCharacterUpdate={handleCharacterUpdate} />} 
+          <Route
+            path="/"
+            element={<Home characters={characters} handleCharacterUpdate={handleCharacterUpdate} />}
           />
           <Route
-            path="/create" 
-            element={<CharacterCreation/>} 
-          /> 
+            path="/create"
+            element={<CharacterCreation />}
+          />
+          <Route
+            path="/story"
+            element={<Story />}
+          />
         </Routes>
       </div>
     </Router>

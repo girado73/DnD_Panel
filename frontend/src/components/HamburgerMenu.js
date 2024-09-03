@@ -20,6 +20,7 @@ const HamburgerMenu = () => {
         <ul>
           <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
           <li><Link to="/create" onClick={toggleMenu}>Create</Link></li>
+          <li><Link to="/story" onClick={toggleMenu}>Story</Link></li>
         </ul>
       </nav>
     </div>
