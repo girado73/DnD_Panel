@@ -42,9 +42,6 @@ def level_up_char(charactername):
 def apply_damage(charactername, damage: int):
     for x in characters:
         if x.Name == charactername:
-            #if "-" in damage:
-            #   damage = int(damage[1]) * (-1)
-            #else:
             x.damage(int(damage))
             x.to_file()
             return jsonify(x.to_dict())
@@ -59,7 +56,7 @@ def create_character():
     print("---------------------------")
     characters.append(Character(data['name'], data['player'], int(data['maxHp']), data['characterclass'], data['race'], data['alignment'], data['bonusInfo']))
 
-    file_path = f'characters/{data['name']}.json'
+    file_path = f"characters/{data['name']}.json"
     characters[-1].to_file(file_path)
     return jsonify(data), 201
 
@@ -96,5 +93,4 @@ if __name__ == '__main__':
     except:
         for character in characters:
             character.to_file()
-
 
