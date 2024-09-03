@@ -25,11 +25,10 @@ class Character():
         self.BonusInfo = bonusInfo
 
     def damage(self, amount):
-        print(f"Amount type: {type(amount)}")
-        print(f"HP type: {type(self.Hp)}")
-        if amount < 0:
-            self.Hp += amount
+        if amount > 0:
+            self.Hp -= amount
         else:
+            #here -= aswell because of negative number
             self.Hp -= amount
 
     def lvlup(self):
