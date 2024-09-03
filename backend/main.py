@@ -38,8 +38,8 @@ def level_up_char(charactername):
     return jsonify({"error: Character not found"}), 404
 
 
-@app.route('/api/character/damage/<charactername>/<int:damage>', methods=['POST'])
-def apply_damage(charactername, damage: int):
+@app.route('/api/character/damage/<charactername>/<damage>', methods=['POST'])
+def apply_damage(charactername, damage):
     for x in characters:
         if x.Name == charactername:
             x.damage(int(damage))
