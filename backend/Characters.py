@@ -52,6 +52,7 @@ class Character():
         """Save the character to a file in JSON format."""
         if file_path == None:
             file_path = os.path.join("characters", f"{self.Name.replace(' ', '_')}.json")
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(file_path, 'w') as file:
             json.dump(self.to_dict(), file, indent=4)
 
