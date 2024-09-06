@@ -85,6 +85,14 @@ def load_characters_from_files(directory='characters'):
 
 characters += load_characters_from_files()
 
+@app.route('/api/story', methods=['GET'])
+def send_story():
+    filepath = "./story/story.md"
+    if not os.path.exists(filepath):
+        os.mkdir(filepath)
+    with open(filepath, "r") as file:
+        return file.read()
+
 if __name__ == '__main__':
     try:
         app.run(debug=True)

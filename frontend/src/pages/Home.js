@@ -1,8 +1,7 @@
 import React from 'react';
-import CharacterCard from './components/CharacterCard';
-import './App.css';
-import EnemiesTable from './components/EnemieTable.js'
-import HPBar from './components/HP_Barchart';
+import CharacterCard from '../components/CharacterCard';
+import '../App.css';
+import EnemiesTable from '../components/EnemieTable.js'
 
 const Home = ({ characters, handleCharacterUpdate }) => {
   return (
