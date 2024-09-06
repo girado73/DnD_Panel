@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import gmf from 'remark-gfm';
 import axios from "axios";
+import "./story.css"
 
 const Story = () => {
   const [story, setStory] = useState("No Story Loaded")
@@ -23,10 +24,13 @@ const Story = () => {
   }
 
   return (
-    <div>
-      <ReactMarkdown remarkPlugins={[gmf]}>{story}</ReactMarkdown>
+    <div className="story-container">
+      <div className="story-content">
+        <ReactMarkdown remarkPlugins={[gmf]}>{story}</ReactMarkdown>
+      </div>
     </div>
   )
 }
 
 export default Story;
+

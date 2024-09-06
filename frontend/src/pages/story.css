@@ -1,0 +1,17 @@
+.story-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.story-content {
+  li{
+    justify-content: left;
+    width: 40%;
+  }
+  max-width: 800px; /* Adjust this value to your desired width */
+  width: 100%;
+  background-color: gray;
+}
+
